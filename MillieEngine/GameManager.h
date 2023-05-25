@@ -11,6 +11,8 @@
 #include "Object.h"
 #include "ObjectList.h"
 #include "ObjectListIterator.h";
+#include "LogManager.h"
+#include "ErrorManager.h"
 #include <exception>
 
 #define DF_VERSION "A.6"	// Dragonfly version.
