@@ -5,7 +5,7 @@
 #include "Object.h"
 #include "ObjectListIterator.h"
 
-namespace em {
+namespace me {
 
 	const int MAX_OBJECTS = 2000;
 
