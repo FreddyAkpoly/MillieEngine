@@ -1,14 +1,17 @@
-//
-// GameManager - The game manager.
-//
-// Copyright 2017-2022 by Mark Claypool and WPI
-// All Rights Reserved
-//
 
 #ifndef __GAME_MANAGER_H__
 #define __GAME_MANAGER_H__
 
 #include "Manager.h"
+#include "LogManager.h"
+#include "Clock.h"
+#include <Windows.h>
+#include "ErrorManager.h"
+#include "Vector.h"
+#include "Object.h"
+#include "ObjectList.h"
+#include "ObjectListIterator.h";
+#include <exception>
 
 #define DF_VERSION "A.6"	// Dragonfly version.
 

@@ -1,9 +1,5 @@
 #include "GameManager.h"
-#include "LogManager.h"
-#include "Clock.h"
-#include <Windows.h>
-#include "ErrorManager.h"
-#include <exception>
+
 
 const int FRAME_TIME_DEFAULT = 33;
 namespace me {

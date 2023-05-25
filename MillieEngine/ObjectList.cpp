@@ -4,7 +4,7 @@ namespace me {
 	me::ObjectList::ObjectList()
 	{
 		m_count = 0;
-		m_p_obj[MAX_OBJECTS] = NULL;
+		
 	}
 
 	int me::ObjectList::insert(Object* p_o)
