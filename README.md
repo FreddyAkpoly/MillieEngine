@@ -1,3 +1,25 @@
+# Manager
+
+## Overview
+
+The `Manager` class serves as a base class for various managers in the game system. It provides basic functionality related to manager initialization and shutdown. Each specific manager in the system should inherit from this base class.
+
+## Initialization
+
+The `startUp()` function is responsible for initializing the manager. By default, it sets the `m_is_started` flag to true, indicating that the manager has been started. Derived classes can override this function to perform additional initialization tasks specific to their functionality.
+
+## Shutting Down
+
+The `shutDown()` function is responsible for shutting down the manager. It sets the `m_is_started` flag to false, indicating that the manager has been stopped. Derived classes can override this function to perform any necessary cleanup operations before shutting down.
+
+## Manager Type
+
+The `setType()` function allows setting the type of the manager. The type is represented as a string. This can be useful for identifying the specific type of a manager instance. The `getType()` function returns the type of the manager.
+
+## Manager Status
+
+The `isStarted()` function returns the status of the manager. It returns true if the manager has been started, and false if it has been shut down.
+
 # GameManager
 
 ## Overview
@@ -47,3 +69,23 @@ By default, the log file is not flushed after each write operation. To enable fl
 ## Shutting Down
 
 To shut down the `LogManager`, call the `shutDown()` function. It closes the log file, cleans up any resources, and shuts down the manager.
+
+# ErrorManager
+
+## Overview
+
+The `ErrorManager` class is responsible for handling and logging errors that occur within the game. It follows the singleton design pattern to ensure that only one instance of the `ErrorManager` can exist.
+
+## Getting the ErrorManager Instance
+
+To obtain the singleton instance of the `ErrorManager`, use the `getInstance()` function. It returns a reference to the `ErrorManager` instance.
+
+## Logging Errors
+
+The `what()` function is used to log errors. It takes a `std::exception` object as an argument and logs the error message along with a timestamp. The error message is obtained using the `what()` function of the `std::exception` object. The logged error message is then returned.
+
+## LogManager Dependency
+
+The `ErrorManager` class has a dependency on the `LogManager` class. It uses the `writeLog()` function of the `LogManager` to write error messages to the log file.
+
+
