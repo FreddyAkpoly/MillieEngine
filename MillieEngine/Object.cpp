@@ -4,9 +4,9 @@ namespace me {
 	me::Object::Object()
 	{
 
-		 m_id = NULL;
-		 m_type = "Object";
-		 m_position = Vector(0,0);
+		m_id = NULL;
+		m_type = "Object";
+		m_position = Vector(0, 0);
 	}
 
 	void me::Object::setId(int new_id)
@@ -40,4 +40,3 @@ namespace me {
 	}
 
 }
-

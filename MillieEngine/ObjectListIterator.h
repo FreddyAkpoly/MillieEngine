@@ -33,5 +33,5 @@ namespace me {
 		Object* currentObject() const;
 	};
 
-} // end of namespace df
+} // end of namespace me
 #endif // __OBJECT_LIST_ITERATOR_H__

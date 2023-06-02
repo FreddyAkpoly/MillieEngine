@@ -44,5 +44,5 @@ namespace me {
 		bool isFull() const;
 	};
 
-} // end of namespace df
+} // end of namespace me
 #endif // __OBJECT_LIST_H__

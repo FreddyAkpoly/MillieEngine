@@ -1,7 +1,7 @@
 
 
-#ifndef __DF_VECTOR_H__
-#define __DF_VECTOR_H__
+#ifndef __me_VECTOR_H__
+#define __me_VECTOR_H__
 
 namespace me {
 
@@ -30,5 +30,5 @@ namespace me {
 		Vector operator+(const Vector& other) const; // Add Vector.
 	};
 
-} // end of namespace df
-#endif //__DF_VECTOR_H__
+} // end of namespace me
+#endif //__me_VECTOR_H__

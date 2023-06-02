@@ -51,5 +51,5 @@ namespace me {
 		char* getTimeString();
 	};
 
-} // end of namespace df
+} // end of namespace me
 #endif // __LOG_MANAGER_H__

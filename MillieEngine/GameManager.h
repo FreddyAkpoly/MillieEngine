@@ -15,7 +15,7 @@
 #include "ErrorManager.h"
 #include <exception>
 
-#define DF_VERSION "A.6"	// Dragonfly version.
+#define me_VERSION "A.6"	// Dragonfly version.
 
 // Two-letter acronym for easier access to manager.
 #define GM me::GameManager::getInstance()
@@ -23,7 +23,7 @@
 namespace me {
 
 	// Dragonfly cofiguration file.
-	const std::string CONFIG_FILENAME = "df-config.txt";
+	const std::string CONFIG_FILENAME = "me-config.txt";
 
 	// Default frame time (game loop time) in milliseconds (33 ms == 30 f/s).
 	const int FRAME_TIME_DEFAULT = 33;
@@ -70,5 +70,5 @@ namespace me {
 		int getStepCount() const;
 	};
 
-} // end of namespace df
+} // end of namespace me
 #endif // __GAME_MANAGER_H__
