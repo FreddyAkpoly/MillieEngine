@@ -1,3 +1,22 @@
+
+
+The core architecture of the game engine can be outlined as follows:
+
+1. **Error Manager**: The Error Manager handles and logs errors that occur within the game engine or during gameplay. It provides error handling and reporting functionalities.
+
+2. **Resource Manager**: The Resource Manager is responsible for managing game resources such as textures, models, sounds, and other assets. It handles loading, unloading, and caching of resources to optimize memory usage.
+
+3. **Render Manager**: The Render Manager handles rendering and graphics-related tasks. It interacts with the graphics API (such as DirectX or OpenGL) to render game objects, apply shaders, manage the rendering pipeline, and handle graphics-related configurations.
+
+4. **Scene Manager**: The Scene Manager manages the game's scenes or levels. It handles scene transitions, loading and unloading of scenes, managing the hierarchy of game objects within a scene, and updating the scene's state.
+
+5. **Audio Manager**: The Audio Manager handles audio-related tasks such as playing background music, sound effects, and managing audio resources. It provides functionalities for loading and playing audio files, controlling volume, and handling audio-related events.
+
+6. **Input Manager**: The Input Manager manages user input from various input devices such as keyboard, mouse, gamepad, or touch screen. It captures input events, processes them, and provides an interface for handling player input within the game.
+
+These managers work together to provide a structured and modular architecture for the game engine. Each manager has its specific responsibilities and interacts with other managers as necessary. This architecture allows for separation of concerns and facilitates the development of scalable and maintainable game systems.
+
+
 # Manager
 
 ## Overview
