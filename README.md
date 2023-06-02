@@ -24,7 +24,7 @@ I would like to acknowledge and express gratitude to "Game Engine Design and Imp
 
 Please refer to the individual documentation of each manager for more details on their usage and functionalities.
 
-
+## The Architecture
 The core architecture of the game engine can be outlined as follows:
 
 1. **Error Manager**: The Error Manager handles and logs errors that occur within the game engine or during gameplay. It provides error handling and reporting functionalities.
