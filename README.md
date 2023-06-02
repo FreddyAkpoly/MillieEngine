@@ -1,3 +1,28 @@
+# MILLIE ENGINE
+
+This project is a game engine that provides a foundation for developing interactive and immersive games. The game engine is designed to handle core functionalities such as error handling, resource management, rendering, scene management, audio playback, and user input.
+
+## Usage
+
+To use the game engine, developers can extend and customize the engine by creating game-specific components, such as game objects, scripts, and logic, while leveraging the provided managers for core functionalities. The engine provides a modular and scalable architecture, allowing for easy integration of custom features and behaviors.
+
+## Getting Started
+
+For detailed instructions on getting started with the game engine, refer to the documentation included with the project. The documentation provides information on setting up the development environment, using the engine's features, and implementing game logic.
+
+## Contributing
+
+Contributions to the game engine project are welcome. If you find any issues, bugs, or have suggestions for improvements, please submit them through the issue tracker or consider contributing code enhancements by creating pull requests.
+
+## License
+
+The game engine project is released under the [MIT License](LICENSE). You are free to use, modify, and distribute the engine's source code for both commercial and non-commercial purposes. Refer to the license file for more details.
+
+## Acknowledgements
+
+I would like to acknowledge and express gratitude to "Game Engine Design and Implementation, " by Alan Thorn for guidance into creating the engine.
+
+Please refer to the individual documentation of each manager for more details on their usage and functionalities.
 
 
 The core architecture of the game engine can be outlined as follows:
