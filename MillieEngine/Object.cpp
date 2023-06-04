@@ -10,7 +10,7 @@ namespace me {
 		static int id = 0;
 		m_id = id++;
 		m_type = "Object";
-
+		m_position = Vector(0, 0);
 		
 		// Add self to WorldManager
 		WM.insertObject(this);
@@ -29,7 +29,7 @@ namespace me {
 	}
 
 	char* Object::getType() const {
-		static char name[20]; // Static to retain the memory after the function returns
+		static char name[10]; // Static to retain the memory after the function returns
 		strcpy_s(name, sizeof(name), m_type.c_str());
 		return name;
 	}

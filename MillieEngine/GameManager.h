@@ -13,6 +13,7 @@
 #include "ObjectListIterator.h"
 #include "LogManager.h"
 #include "ErrorManager.h"
+#include "WorldManager.h"
 #include <exception>
 
 #define me_VERSION "A.6"	// Dragonfly version.
