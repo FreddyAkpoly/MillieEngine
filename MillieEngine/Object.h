@@ -16,7 +16,7 @@ namespace me {
 		Object();
 
 		// Destroy object, removing itself from game world (WorldManager).
-		virtual ~Object() {};
+		virtual ~Object();
 
 		// Set Object id.
 		void setId(int new_id);
@@ -28,7 +28,7 @@ namespace me {
 		void setType(std::string new_type);
 
 		// Get type identifier of Object.
-		std::string getType() const;
+		char* getType() const;
 
 		// Set position of Object.
 		virtual void setPosition(Vector new_position);

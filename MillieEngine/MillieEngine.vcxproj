@@ -136,6 +136,8 @@
   <ItemGroup>
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="ErrorManager.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventStep.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="LogManager.cpp" />
@@ -144,10 +146,14 @@
     <ClCompile Include="ObjectList.cpp" />
     <ClCompile Include="ObjectListIterator.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Box.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="ErrorManager.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventStep.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
@@ -155,6 +161,7 @@
     <ClInclude Include="ObjectList.h" />
     <ClInclude Include="ObjectListIterator.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="WorldManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LogFile.log" />

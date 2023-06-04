@@ -26,6 +26,7 @@ namespace me {
 		catch (const std::exception& e) {
 			EM.what(e);
 		}
+		return 1;
 	}
 
 	bool GameManager::isValid(std::string event_name) const
