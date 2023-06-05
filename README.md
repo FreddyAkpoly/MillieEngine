@@ -191,3 +191,37 @@ Please refer to the documentation included with the project for more detailed in
 
 The Resource Manager does not have any external dependencies. It is designed to work within the game engine framework.
 
+# Game Engine Project - World Manager
+
+The World Manager is a component of the game engine that manages the game world and objects within it. It provides functionalities for inserting and removing objects from the world, updating their positions, handling collisions, and rendering them in the graphics window.
+
+## Features
+
+- **Object Management**: The World Manager allows for inserting and removing objects from the game world. Objects can be added or removed dynamically during gameplay.
+
+- **Object Update**: The manager updates the positions of objects based on their velocities. It predicts the new position of each object and moves them accordingly. Objects with solidness are checked for collisions with other solid objects.
+
+- **Collision Handling**: The World Manager provides collision detection and handling for objects in the game world. It detects collisions between objects and triggers collision events. Objects can respond to collision events and perform appropriate actions.
+
+- **Rendering**: The manager handles the rendering of objects in the graphics window. It maintains a list of objects to be rendered and organizes them based on their altitudes. Objects are rendered in the correct order to achieve a visually appealing scene.
+
+- **Boundary Detection**: The World Manager detects if an object goes out of the game world's boundaries. It triggers an "out of bounds" event for the object, allowing for custom handling or removal of the object.
+
+## Usage
+
+To utilize the World Manager in your game, follow these steps:
+
+1. Get the singleton instance of the World Manager using the `getInstance()` method.
+2. Call the `startUp()` method to initialize the manager.
+3. Create objects in your game and insert them into the world using the `insertObject()` method.
+4. Implement the necessary event handlers in your objects to respond to collisions and boundary events.
+5. In your game loop, call the `update()` method of the World Manager to update the positions of objects and handle collisions.
+6. Call the `draw()` method to render the objects in the graphics window.
+7. Optionally, mark objects for deletion using the `markForDelete()` method to remove them from the world.
+8. Finally, when your game is finished, call the `shutDown()` method to clean up resources.
+
+Please refer to the documentation included with the project for more detailed information on the usage and available functionalities of the World Manager.
+
+## Dependencies
+
+The World Manager relies on other components of the game engine, such as the Object Manager, Event Manager, and Display Manager. Make sure to have these components properly integrated into your project and configured.
