@@ -29,7 +29,7 @@ namespace me
 			return 0;
 
 		// Create Window to draw on
-		m_p_window = new sf::RenderWindow(sf::VideoMode(m_window_horizontal_pixels, m_window_vertical_pixels), "Dragonfly Engine");
+		m_p_window = new sf::RenderWindow(sf::VideoMode(m_window_horizontal_pixels, m_window_vertical_pixels), "Millie Engine");
 
 		// Turn off mouse cursor for window
 		m_p_window->setMouseCursorVisible(false);
