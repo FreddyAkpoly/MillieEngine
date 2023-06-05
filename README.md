@@ -132,4 +132,32 @@ The `what()` function is used to log errors. It takes a `std::exception` object 
 
 The `ErrorManager` class has a dependency on the `LogManager` class. It uses the `writeLog()` function of the `LogManager` to write error messages to the log file.
 
+# Display Manager
 
+The Display Manager is a component of the game engine that handles graphics and visual display. It provides functionalities for opening and managing a graphics window, rendering characters and strings, and converting between ASCII spaces and window pixels.
+
+## Features
+
+- **Window Management**: The Display Manager handles the creation and management of the graphics window. It allows for setting the window size, title, style, and background color. The manager provides methods for opening and closing the window.
+
+- **ASCII Rendering**: The manager supports rendering ASCII characters and strings at specific locations in the graphics window. It allows for specifying the character, color, and justification (left, center, or right) of the rendered text.
+
+- **Coordinate Conversion**: The Display Manager provides methods to convert between ASCII spaces (character coordinates) and window pixels. Developers can use these methods to position and align game objects and text within the graphics window.
+
+- **Window Buffer Rendering**: The manager handles the rendering of the window buffer, ensuring that the rendered content is visible on the screen. It provides a method to swap the front and back buffers, updating the displayed content.
+
+## Usage
+
+To utilize the Display Manager in your game, follow these steps:
+
+1. Get the singleton instance of the Display Manager using the `getInstance()` method.
+2. Call the `startUp()` method to initialize the graphics window and prepare it for display.
+3. Use the various rendering methods (`drawCh()` and `drawString()`) to render ASCII characters and strings at specific locations in the window.
+4. To update the displayed content, call the `swapBuffers()` method.
+5. Finally, when your game is finished, call the `shutDown()` method to close the graphics window and clean up resources.
+
+Please refer to the documentation included with the project for more detailed information on the usage and available functionalities of the Display Manager.
+
+## Dependencies
+
+The Display Manager relies on the SFML (Simple and Fast Multimedia Library) for graphics rendering and window management. Make sure to have SFML installed and properly configured in your development environment.
