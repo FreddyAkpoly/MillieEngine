@@ -161,3 +161,33 @@ Please refer to the documentation included with the project for more detailed in
 ## Dependencies
 
 The Display Manager relies on the SFML (Simple and Fast Multimedia Library) for graphics rendering and window management. Make sure to have SFML installed and properly configured in your development environment.
+
+# Resource Manager
+
+The Resource Manager is a component of the game engine that handles the loading and management of game resources, such as sprites. It provides functionalities for loading sprites from sprite files, storing them in memory, and retrieving them for use in the game.
+
+## Features
+
+- **Sprite Loading**: The Resource Manager supports the loading of sprites from sprite files. The sprite files contain information about the frames, dimensions, and color of the sprite. The manager reads the sprite file, constructs the corresponding Sprite object, and stores it in memory for later use.
+
+- **Sprite Management**: The manager keeps track of the loaded sprites and provides methods to retrieve a sprite by its label. It allows for unloading sprites from memory when they are no longer needed, freeing up system resources.
+
+- **Sprite File Format**: The Resource Manager expects sprite files to follow a specific format. The format includes tags and values for specifying the number of frames, width, height, color, and frame data. The manager reads and parses the sprite file according to this format to construct the sprite object accurately.
+
+## Usage
+
+To utilize the Resource Manager in your game, follow these steps:
+
+1. Get the singleton instance of the Resource Manager using the `getInstance()` method.
+2. Call the `startUp()` method to initialize the manager.
+3. Use the `loadSprite()` method to load sprites from sprite files. Provide the filename and a unique label for each sprite. The manager will read the sprite file, construct the sprite object, and store it in memory.
+4. When you need to use a sprite in your game, call the `getSprite()` method, passing the sprite's label. The manager will return the corresponding sprite object.
+5. If a sprite is no longer needed, call the `unloadSprite()` method, passing the sprite's label. The manager will remove the sprite from memory, freeing up system resources.
+6. Finally, when your game is finished, call the `shutDown()` method to clean up resources and shut down the manager.
+
+Please refer to the documentation included with the project for more detailed information on the usage and available functionalities of the Resource Manager.
+
+## Dependencies
+
+The Resource Manager does not have any external dependencies. It is designed to work within the game engine framework.
+
