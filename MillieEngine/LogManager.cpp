@@ -28,7 +28,9 @@ namespace me {
 		else
 		{
 			std::cout << "Log file created successfully." << std::endl;
-			writeLog("Log Manager Started %s", LM.getTimeString());
+			
+			writeLog("Log Manager Started %s", getTimeString());
+
 			return 0;
 		}
 	}

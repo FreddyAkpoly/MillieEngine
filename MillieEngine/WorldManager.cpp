@@ -66,5 +66,34 @@ namespace me {
 		return list;
 	}
 
+	void WorldManager::update() {
+
+
+		// Delete all marked Objects
+		ObjectListIterator li(&m_deletions);
+		while (!li.isDone()) {
+			delete li.currentObject();
+			li.next();
+		}
+
+		m_deletions.clear();		// Clear list for next update
+
+	}
+
+	int WorldManager::markForDelete(Object* p_o) {
+		ObjectListIterator li(&m_deletions);
+
+		// Check if Objects have already been marked
+		while (!li.isDone()) {
+			if (li.currentObject() == p_o) {
+				return 0;
+			}
+			li.next();
+		}
+
+		// if not add to list
+		m_deletions.insert(p_o);
+	}
+
 	
 }

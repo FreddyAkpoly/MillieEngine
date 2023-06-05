@@ -53,6 +53,10 @@ namespace me {
 		ObjectList getAllObjects() const;
 
 		ObjectList ObjectsOfType(std::string type) const;
+
+		void update();
+		
+		int markForDelete(Object* p_o);
 		
 	};
 
