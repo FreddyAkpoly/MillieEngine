@@ -12,7 +12,7 @@
 
 namespace me {
 
-	const std::string STEP_EVENT = "df::step";
+	const std::string STEP_EVENT = "step";
 
 	class EventStep : public Event {
 
