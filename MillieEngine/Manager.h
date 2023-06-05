@@ -2,7 +2,7 @@
 #define __MANAGER_H__
 
 #include <string>
-
+#include "Event.h"
 namespace me {
 
     class Manager {

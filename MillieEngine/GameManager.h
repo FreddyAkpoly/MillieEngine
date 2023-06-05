@@ -3,19 +3,8 @@
 #define __GAME_MANAGER_H__
 
 #include "Manager.h"
-#include "LogManager.h"
-#include "Clock.h"
-#include <Windows.h>
-#include "ErrorManager.h"
-#include "Vector.h"
-#include "Object.h"
-#include "ObjectList.h"
-#include "ObjectListIterator.h"
-#include "LogManager.h"
-#include "ErrorManager.h"
-#include "WorldManager.h"
-#include "EventStep.h"
-#include "Event.h"
+
+
 #include <exception>
 
 #define me_VERSION "A.6"	// Dragonfly version.

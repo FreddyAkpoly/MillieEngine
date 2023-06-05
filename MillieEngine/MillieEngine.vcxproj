@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="DisplayManager.cpp" />
     <ClCompile Include="ErrorManager.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventStep.cpp" />
@@ -156,6 +157,8 @@
   <ItemGroup>
     <ClInclude Include="Box.h" />
     <ClInclude Include="Clock.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="DisplayManager.h" />
     <ClInclude Include="ErrorManager.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventStep.h" />
@@ -170,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="LogFile.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="df-font.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

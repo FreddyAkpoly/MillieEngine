@@ -95,5 +95,22 @@ namespace me {
 		m_deletions.insert(p_o);
 	}
 
+
+	// Draw all Objects
+	void WorldManager::draw() {
+
+		ObjectListIterator li(&m_updates);
+		for (int i = 0; i < MAX_ALTITUDE; i++) {
+			li.first();
+			while (!li.isDone()) {
+				Object* p_temp_o = li.currentObject();
+
+				li.next();
+			}
+
+		}
+	}
+
+
 	
 }

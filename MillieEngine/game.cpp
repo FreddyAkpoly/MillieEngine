@@ -1,30 +1,53 @@
+#include "Manager.h"
 #include "GameManager.h"
-#include "SFML/Window.hpp"
+#include "Vector.h"
+#include "LogManager.h"
+#include "WorldManager.h"
+#include "Object.h"
+#include "ObjectList.h"
+#include "ObjectListIterator.h";
+#include "Clock.h"
+#include "Event.h"
+#include "EventStep.h"
+#include "DisplayManager.h"
+
+
+#include <Windows.h>
+#include <assert.h>
+#include<iostream>
+
+bool DisplayTest();
 using namespace me;
 using namespace std;
-bool eventTest();
+
 int main(int argc, char* argv[]) {
-    GM.startUp();
-    GM.run();
-	eventTest();
-    GM.shutDown();
+	GM.startUp();
+
+	DisplayTest();
+
+	GM.run();
+
+	GM.shutDown();
 
 }
 
-bool eventTest()
+class Saucer : public Object
 {
 
-	//Creating Event
-	Event* new_event = new Event();
-	
+public:
+	Saucer()
+	{
+		setType("Saucer");
 
-	EventStep step_event;
-
-	LM.writeLog("New Event: %s \n", new_event->getType());
-	if (new_event->getType() == "TEST_EVENT") {
-		LM.writeLog("Success\n");
-		return true;
+		Vector pos(7.0f, DM.getVertical() / 2.0f);
+		setPosition(pos);
 	}
+};
 
-	return false;
+bool DisplayTest() {
+
+	DM.setBackgroundColor(WHITE);
+	DM.drawString(Vector(10, 20), "HELLO", LEFT_JUSTIFIED, YELLOW);
+	return true;
+
 }

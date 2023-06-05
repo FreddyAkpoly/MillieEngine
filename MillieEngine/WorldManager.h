@@ -57,6 +57,8 @@ namespace me {
 		void update();
 		
 		int markForDelete(Object* p_o);
+
+		void draw();
 		
 	};
 

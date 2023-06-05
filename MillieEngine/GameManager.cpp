@@ -1,5 +1,12 @@
 #include "GameManager.h"
+#include "LogManager.h"
+#include "WorldManager.h"
+#include "Clock.h"
+#include "DisplayManager.h"
+#include "ErrorManager.h"
 
+#include <iostream>
+#include <Windows.h>
 
 const int FRAME_TIME_DEFAULT = 33;
 namespace me {
@@ -21,8 +28,8 @@ namespace me {
 		try {
 			LM.startUp();
 			WM.startUp();
+			DM.startUp();
 			LM.writeLog("Game Manager Started %s", LM.getTimeString());
-
 
 			
 			
@@ -53,16 +60,21 @@ namespace me {
 			
 			while (!m_game_over)
 			{
+				int x = 1;
 				Clock clock;
 				long int start_time = clock.delta();
 
 				WM.update();
+				WM.draw();
+				DM.swapBuffers();
+
 
 				long int end_time = clock.split() / 1000000;
 
 				Sleep((frame_time - end_time));
 
-				setGameOver(true);
+				if(x == 2)
+				 setGameOver(true);
 			}
 		}
 		catch (const std::exception& e) {
