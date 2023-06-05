@@ -169,7 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Font Include="df-font.ttf">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files\Helpers</Filter>
     </Font>
   </ItemGroup>
 </Project>

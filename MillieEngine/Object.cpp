@@ -57,7 +57,7 @@ namespace me {
 	// Draw Object
 	int Object::draw()
 	{
-		char ch = '@';
+		char ch = 'OO';
 		DM.drawCh(m_position, ch, YELLOW);
 		return 1;
 	}
