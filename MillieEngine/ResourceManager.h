@@ -10,7 +10,12 @@
 #include "Manager.h"
 
 #include "Sprite.h"
-
+#define FRAMES_TOKEN "frames"
+#define HEIGHT_TOKEN "height"
+#define WIDTH_TOKEN "width"
+#define COLOR_TOKEN "color"
+#define END_FRAME_TOKEN "end"
+#define END_SPRITE_TOKEN "eof"
 // Two-letter acronym for easier access to manager.
 #define RM me::ResourceManager::getInstance()
 

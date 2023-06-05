@@ -34,6 +34,9 @@
     <Filter Include="Source Files\Helpers">
       <UniqueIdentifier>{4695bf79-3d90-4dcf-b9ed-2c52fa6f7b46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sprites">
+      <UniqueIdentifier>{c19a354f-8f32-4bfe-9d4b-bba52e61768c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp">
@@ -184,9 +187,12 @@
     <Text Include="LogFile.log">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="player.txt">
+      <Filter>Sprites</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="df-font.ttf">
+    <Font Include="me-font.ttf">
       <Filter>Header Files\Helpers</Filter>
     </Font>
   </ItemGroup>

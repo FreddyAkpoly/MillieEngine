@@ -38,7 +38,7 @@ namespace me
 		m_p_window->setVerticalSyncEnabled(true);
 
 		// load font
-		m_font.loadFromFile("df-font.ttf");
+		m_font.loadFromFile("me-font.ttf");
 
 		// Check if everything loaded properly
 		if (!m_p_window)

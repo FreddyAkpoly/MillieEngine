@@ -4,6 +4,7 @@
 #include "Clock.h"
 #include "DisplayManager.h"
 #include "InputManager.h"
+#include "ResourceManager.h"
 
 #include <iostream>
 #include <Windows.h>
@@ -34,6 +35,7 @@ namespace me {
 		WM.startUp();
 		DM.startUp();
 		IM.startUp();
+		RM.startUp();
 		LM.writeLog("Game Manager Started. \n");
 		return 0;
 	}
@@ -51,6 +53,7 @@ namespace me {
 		while (!game_over) {
 			Clock clock;
 			long int start_time = clock.delta();
+
 			IM.getInput();
 			// Get Input
 
@@ -58,17 +61,17 @@ namespace me {
 
 			WM.draw();
 
-			//DM.drawCh(Vector(0, 0), '-',df::YELLOW);
+			//DM.drawCh(Vector(0, 0), '-',YELLOW);
+
 			DM.swapBuffers();
 
 
 			long int end_time = clock.split() / 1000000;
-			//std::cout << frame_time << "\n";
-			//std::cout << end_time;
-			//LM.writeLog("sleep_time: %d \n", frame_time - (end_time/1000));
+
 			Sleep((frame_time - end_time));
 
 		}
+
 	}
 
 

@@ -191,9 +191,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="LogFile.log" />
+    <Text Include="player.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="df-font.ttf" />
+    <Font Include="me-font.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
