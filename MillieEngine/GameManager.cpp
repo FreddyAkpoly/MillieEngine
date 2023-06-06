@@ -61,8 +61,55 @@ namespace me {
 
 			WM.draw();
 
-			//DM.drawCh(Vector(0, 0), '-',YELLOW);
+			
+			
+			
+			
+			//GAME CONTENT
+			for (int i = 20; i < 60; i+=2) {
+				DM.drawCh(Vector(i, 22), '#', YELLOW);
+			}
 
+			for (int i = 20; i < 60; i += 2) {
+				DM.drawCh(Vector(i, 0), '#', YELLOW);
+			}
+
+			for (int i = 0; i < 60; i+=2) {
+				DM.drawCh(Vector(20, i), '#', YELLOW);
+			}
+
+			for (int i = 0; i < 60; i += 2) {
+				DM.drawCh(Vector(60, i), '#', YELLOW);
+			}
+
+			DM.drawCh(Vector(30, 4), '#', RED);
+			DM.drawCh(Vector(34, 4), '#', RED);
+			DM.drawCh(Vector(38, 4), '#', RED);
+			DM.drawCh(Vector(34, 5.6), '#', RED);
+
+
+		
+				DM.drawCh(Vector(65, 2), 'N', WHITE);
+				DM.drawCh(Vector(68, 2), 'E', WHITE);
+				DM.drawCh(Vector(71, 2), 'X', WHITE);
+				DM.drawCh(Vector(74, 2), 'T', WHITE);
+
+				DM.drawCh(Vector(78, 2), 'U', WHITE);
+				DM.drawCh(Vector(81, 2), 'P', WHITE);
+
+
+
+
+
+
+
+
+			
+
+			
+			
+			
+			
 			DM.swapBuffers();
 
 

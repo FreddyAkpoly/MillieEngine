@@ -155,12 +155,13 @@ public:
 void game() {
 
 	
-
+	
 	//test_object->setDirection(Vector(1, 0));
 	//test_object->setSpeed(0.5f);
 
-	new Saucer;
+	//new Saucer;
 
+	/*
 	Object* block_object = new Object();
 	block_object->setAltitude(2);
 	block_object->setPosition(Vector(30, 0));
@@ -175,7 +176,7 @@ void game() {
 	block_object3->setAltitude(2);
 	block_object3->setPosition(Vector(30, 20));
 	block_object3->setSolidness(SOFT);
-
+	*/
 
 	
 }
