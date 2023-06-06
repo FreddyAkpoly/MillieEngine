@@ -132,4 +132,96 @@ The `what()` function is used to log errors. It takes a `std::exception` object 
 
 The `ErrorManager` class has a dependency on the `LogManager` class. It uses the `writeLog()` function of the `LogManager` to write error messages to the log file.
 
+# Display Manager
 
+The Display Manager is a component of the game engine that handles graphics and visual display. It provides functionalities for opening and managing a graphics window, rendering characters and strings, and converting between ASCII spaces and window pixels.
+
+## Features
+
+- **Window Management**: The Display Manager handles the creation and management of the graphics window. It allows for setting the window size, title, style, and background color. The manager provides methods for opening and closing the window.
+
+- **ASCII Rendering**: The manager supports rendering ASCII characters and strings at specific locations in the graphics window. It allows for specifying the character, color, and justification (left, center, or right) of the rendered text.
+
+- **Coordinate Conversion**: The Display Manager provides methods to convert between ASCII spaces (character coordinates) and window pixels. Developers can use these methods to position and align game objects and text within the graphics window.
+
+- **Window Buffer Rendering**: The manager handles the rendering of the window buffer, ensuring that the rendered content is visible on the screen. It provides a method to swap the front and back buffers, updating the displayed content.
+
+## Usage
+
+To utilize the Display Manager in your game, follow these steps:
+
+1. Get the singleton instance of the Display Manager using the `getInstance()` method.
+2. Call the `startUp()` method to initialize the graphics window and prepare it for display.
+3. Use the various rendering methods (`drawCh()` and `drawString()`) to render ASCII characters and strings at specific locations in the window.
+4. To update the displayed content, call the `swapBuffers()` method.
+5. Finally, when your game is finished, call the `shutDown()` method to close the graphics window and clean up resources.
+
+Please refer to the documentation included with the project for more detailed information on the usage and available functionalities of the Display Manager.
+
+## Dependencies
+
+The Display Manager relies on the SFML (Simple and Fast Multimedia Library) for graphics rendering and window management. Make sure to have SFML installed and properly configured in your development environment.
+
+# Resource Manager
+
+The Resource Manager is a component of the game engine that handles the loading and management of game resources, such as sprites. It provides functionalities for loading sprites from sprite files, storing them in memory, and retrieving them for use in the game.
+
+## Features
+
+- **Sprite Loading**: The Resource Manager supports the loading of sprites from sprite files. The sprite files contain information about the frames, dimensions, and color of the sprite. The manager reads the sprite file, constructs the corresponding Sprite object, and stores it in memory for later use.
+
+- **Sprite Management**: The manager keeps track of the loaded sprites and provides methods to retrieve a sprite by its label. It allows for unloading sprites from memory when they are no longer needed, freeing up system resources.
+
+- **Sprite File Format**: The Resource Manager expects sprite files to follow a specific format. The format includes tags and values for specifying the number of frames, width, height, color, and frame data. The manager reads and parses the sprite file according to this format to construct the sprite object accurately.
+
+## Usage
+
+To utilize the Resource Manager in your game, follow these steps:
+
+1. Get the singleton instance of the Resource Manager using the `getInstance()` method.
+2. Call the `startUp()` method to initialize the manager.
+3. Use the `loadSprite()` method to load sprites from sprite files. Provide the filename and a unique label for each sprite. The manager will read the sprite file, construct the sprite object, and store it in memory.
+4. When you need to use a sprite in your game, call the `getSprite()` method, passing the sprite's label. The manager will return the corresponding sprite object.
+5. If a sprite is no longer needed, call the `unloadSprite()` method, passing the sprite's label. The manager will remove the sprite from memory, freeing up system resources.
+6. Finally, when your game is finished, call the `shutDown()` method to clean up resources and shut down the manager.
+
+Please refer to the documentation included with the project for more detailed information on the usage and available functionalities of the Resource Manager.
+
+## Dependencies
+
+The Resource Manager does not have any external dependencies. It is designed to work within the game engine framework.
+
+# Game Engine Project - World Manager
+
+The World Manager is a component of the game engine that manages the game world and objects within it. It provides functionalities for inserting and removing objects from the world, updating their positions, handling collisions, and rendering them in the graphics window.
+
+## Features
+
+- **Object Management**: The World Manager allows for inserting and removing objects from the game world. Objects can be added or removed dynamically during gameplay.
+
+- **Object Update**: The manager updates the positions of objects based on their velocities. It predicts the new position of each object and moves them accordingly. Objects with solidness are checked for collisions with other solid objects.
+
+- **Collision Handling**: The World Manager provides collision detection and handling for objects in the game world. It detects collisions between objects and triggers collision events. Objects can respond to collision events and perform appropriate actions.
+
+- **Rendering**: The manager handles the rendering of objects in the graphics window. It maintains a list of objects to be rendered and organizes them based on their altitudes. Objects are rendered in the correct order to achieve a visually appealing scene.
+
+- **Boundary Detection**: The World Manager detects if an object goes out of the game world's boundaries. It triggers an "out of bounds" event for the object, allowing for custom handling or removal of the object.
+
+## Usage
+
+To utilize the World Manager in your game, follow these steps:
+
+1. Get the singleton instance of the World Manager using the `getInstance()` method.
+2. Call the `startUp()` method to initialize the manager.
+3. Create objects in your game and insert them into the world using the `insertObject()` method.
+4. Implement the necessary event handlers in your objects to respond to collisions and boundary events.
+5. In your game loop, call the `update()` method of the World Manager to update the positions of objects and handle collisions.
+6. Call the `draw()` method to render the objects in the graphics window.
+7. Optionally, mark objects for deletion using the `markForDelete()` method to remove them from the world.
+8. Finally, when your game is finished, call the `shutDown()` method to clean up resources.
+
+Please refer to the documentation included with the project for more detailed information on the usage and available functionalities of the World Manager.
+
+## Dependencies
+
+The World Manager relies on other components of the game engine, such as the Object Manager, Event Manager, and Display Manager. Make sure to have these components properly integrated into your project and configured.
