@@ -191,7 +191,7 @@ Please refer to the documentation included with the project for more detailed in
 
 The Resource Manager does not have any external dependencies. It is designed to work within the game engine framework.
 
-# Game Engine Project - World Manager
+# World Manager
 
 The World Manager is a component of the game engine that manages the game world and objects within it. It provides functionalities for inserting and removing objects from the world, updating their positions, handling collisions, and rendering them in the graphics window.
 
@@ -225,3 +225,6 @@ Please refer to the documentation included with the project for more detailed in
 ## Dependencies
 
 The World Manager relies on other components of the game engine, such as the Object Manager, Event Manager, and Display Manager. Make sure to have these components properly integrated into your project and configured.
+
+# DEMO
+![Millie Engine Tetris](https://github.com/FreddyAkpoly/MillieEngine/blob/master/MillieEngine.png)
