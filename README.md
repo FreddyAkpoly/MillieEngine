@@ -1,6 +1,6 @@
 # MILLIE ENGINE
 
-This project is a game engine that provides a foundation for developing interactive and immersive games. The game engine is designed to handle core functionalities such as error handling, resource management, rendering, scene management, audio playback, and user input.
+This project is a game engine that provides a foundation for developing interactive ascii based games. The game engine is designed to handle core functionalities such as error handling, resource management, rendering, scene management, audio playback, and user input.
 
 ## Usage
 
